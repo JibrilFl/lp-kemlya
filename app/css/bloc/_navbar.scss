@@ -1,0 +1,29 @@
+.nav {
+    position: absolute;
+    width: 100vw;
+    height: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $brown;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.05);
+
+    &__list:not(:last-child) {
+        margin-right: 35px;
+    }
+
+    &__list:nth-child(2) {
+        cursor: default;
+    }
+
+    &__link {
+        color: $brown;
+        cursor: pointer;
+        transition: color .3s;
+    }
+
+    &__link:hover {
+        color: $brown_light;
+    }
+}

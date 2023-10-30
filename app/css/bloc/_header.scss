@@ -1,0 +1,88 @@
+.slide {
+    height: 100vh;
+    width: 100vw;
+
+    &__header {
+        position: relative;
+        background-image: url('../img/bg_1.png');
+        background-position: 50% 50%;
+        background-size: cover;
+        background-repeat: no-repeat;    
+    }
+
+    &__header::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 30px;
+        background-image: url('../img/mouse.svg');
+        bottom: 75px;
+        left: calc(50% - 9px);
+        transform: translateY(-50%);
+    }
+
+    &__header_wrapper {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%);
+    }
+
+    &__header .frame_1,
+    &__header .frame_2 {
+        position: absolute;
+        height: 100vh;
+        width: 100vw;	
+    }
+
+    &__header .frame_1::after,
+    &__header .frame_1::before,
+    &__header .frame_2::after,
+    &__header .frame_2::before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        display: block;
+        height: 20px;
+    }
+
+    &__header .frame_1::after {
+        border-top: 2px solid $brown;
+        border-left: 2px solid $brown;
+        top: 37px;
+        left: 41px;
+    }
+
+    &__header .frame_1::before {
+        border-bottom: 2px solid $brown;
+        border-left: 2px solid $brown;
+        bottom: 51px;
+        left: 41px;
+    }
+
+    &__header .frame_2::after {
+        border-bottom: 2px solid $brown;
+        border-right: 2px solid $brown;
+        bottom: 51px;
+        right: 41px;
+    }
+
+    &__header .frame_2::before {
+        border-top: 2px solid $brown;
+        border-right: 2px solid $brown;
+        top: 37px;
+        right: 41px;
+    }
+
+    &__header_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header_title {
+        margin-top: 100px;
+        color: $brown_light;
+        font-size: 30px;
+    }
+}
